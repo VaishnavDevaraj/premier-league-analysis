@@ -1,7 +1,14 @@
-# Premier League Data Analysis Project
+# Premier League Data Analysis Dashboard
 
 ## Overview
-This project provides an end-to-end data analysis of the English Premier League 2024-25 season data. The analysis includes data cleaning, exploratory data analysis, statistical analysis, visualization, and predictive modeling.
+This project provides an interactive dashboard for analyzing English Premier League 2024-25 season data, including team and player statistics, performance metrics, and team comparisons.
+
+## Features
+- **League Overview**: Top-level view of Premier League statistics and trends
+- **Team Analysis**: Detailed performance metrics for each team
+- **Player Statistics**: In-depth player performance analysis and comparisons
+- **Match Predictions**: Team comparison tool with performance metrics
+- **League Table**: Team performance metrics and statistical visualizations
 
 ## Project Structure
 - **data/**: Contains raw and processed datasets
@@ -11,30 +18,43 @@ This project provides an end-to-end data analysis of the English Premier League 
 - **visualizations/**: Generated plots and charts
 - **dashboard/**: Interactive dashboard files
 
-## Analysis Steps
-1. **Data Collection & Integration**: Working with Premier League dataset and additional sources
-2. **Exploratory Data Analysis**: Understanding data distributions and relationships
-3. **Data Cleaning & Preprocessing**: Handling missing values, outliers, and feature engineering
-4. **Statistical Analysis**: Applying probability and statistical techniques
-5. **Data Visualization**: Creating insightful visualizations
-6. **Predictive Modeling**: Building and evaluating machine learning models
-7. **Dashboard Creation**: Developing an interactive dashboard to present findings
-
 ## Tools & Technologies
-- Python (Pandas, NumPy, Scikit-learn)
-- Data Visualization (Matplotlib, Seaborn, Plotly)
+- Python (Pandas, NumPy)
+- Data Visualization (Matplotlib, Plotly)
 - Statistical Analysis (SciPy)
-- Machine Learning (Scikit-learn, XGBoost)
 - Dashboard Development (Streamlit)
 
 ## Getting Started
 1. Clone this repository
-2. Install required dependencies: `pip install -r requirements.txt`
-3. Explore the Jupyter notebooks in the `notebooks/` directory
-4. Run the Streamlit dashboard: `streamlit run dashboard/app.py`
+   ```bash
+   git clone https://github.com/VaishnavDevaraj/premier-league-analysis.git
+   cd premier-league-analysis
+   ```
+
+2. Install required dependencies
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. Run the Streamlit dashboard
+   ```bash
+   streamlit run dashboard/app.py
+   ```
+
+## Screenshots
+(Screenshots will be added soon)
+
+## Data Source
+Player statistics data from FBRef for the Premier League 2024-25 season.
+
+## Deployment
+This dashboard can be deployed using:
+- [Streamlit Community Cloud](https://streamlit.io/cloud)
+- Heroku
+- AWS, Azure, or Google Cloud Platform
 
 ## License
-[Your chosen license]
+MIT
 
 ## Author
-[Your Name]
+Vaishnav Devaraj

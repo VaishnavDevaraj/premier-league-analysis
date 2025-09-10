@@ -1,6 +1,6 @@
-# How to Run the Premier League Analysis Project
+# How to Run the Premier League Analysis Dashboard
 
-This guide provides step-by-step instructions for setting up and running the Premier League data analysis project.
+This guide provides step-by-step instructions for setting up and running the Premier League data analysis dashboard.
 
 ## Prerequisites
 
@@ -15,8 +15,8 @@ Before you begin, ensure you have the following installed:
 
 If using Git:
 ```bash
-git clone <repository-url>
-cd PremierLeague_Analysis
+git clone https://github.com/VaishnavDevaraj/premier-league-analysis.git
+cd premier-league-analysis
 ```
 
 Alternatively, download and extract the project files.
@@ -42,62 +42,67 @@ Install all required packages:
 pip install -r requirements.txt
 ```
 
-## Running the Analysis
+## Running the Dashboard
 
-### 1. Data Exploration and Cleaning
+Launch the Streamlit dashboard application:
 
-Open and run the first Jupyter notebook:
 ```bash
-jupyter notebook notebooks/1_Data_Exploration_Cleaning.ipynb
+streamlit run dashboard/app.py
 ```
 
-This notebook will:
-- Load the raw Premier League data
-- Explore the data structure
-- Clean the dataset
-- Perform initial visualizations
-- Save the cleaned dataset for further analysis
+This will start the dashboard on your local machine and automatically open it in your default web browser (typically at http://localhost:8501).
 
-### 2. Statistical Analysis and Visualization
+## Dashboard Features
 
-Open and run the second Jupyter notebook:
-```bash
-jupyter notebook notebooks/2_Statistical_Analysis_Visualization.ipynb
-```
+The dashboard includes the following sections:
 
-This notebook will:
-- Load the cleaned dataset
-- Perform in-depth statistical analysis
-- Create visualizations of key patterns and trends
-- Apply hypothesis testing
-- Save visualizations for the report
+### 1. Overview
+- General information about the Premier League dataset
+- Key statistics and metrics
+- Dataset structure and information
 
-### 3. Predictive Modeling
+### 2. Team Analysis
+- Detailed metrics for each Premier League team
+- Comparative analysis between teams
+- Performance trends and insights
 
-Open and run the third Jupyter notebook:
-```bash
-jupyter notebook notebooks/3_Predictive_Modeling.ipynb
-```
+### 3. Player Statistics
+- Individual player performance metrics
+- Player comparisons and rankings
+- Advanced statistics and visualizations
 
-This notebook will:
-- Prepare data for machine learning
-- Train and evaluate various models
-- Tune hyperparameters
-- Analyze feature importance
-- Save the best performing model
+### 4. Match Predictions
+- Team comparison tool
+- Head-to-head analysis
+- Performance radar charts
+- Top player comparison
 
-### 4. Final Report
+### 5. League Table
+- Complete Premier League standings
+- Team performance metrics
+- Scoring analysis
+- Expected vs. actual goals comparison
+- Disciplinary records
 
-Open and run the fourth Jupyter notebook:
-```bash
-jupyter notebook notebooks/4_Final_Report.ipynb
-```
+## Troubleshooting
 
-This notebook will:
-- Summarize all findings
-- Present key visualizations
-- Provide business recommendations
-- Document limitations and future work
+If you encounter any issues:
+
+1. **Dependencies not installing correctly:**
+   Make sure you're using a compatible Python version (3.8 or higher).
+   Try installing dependencies one by one.
+
+2. **Dashboard not starting:**
+   Check if Streamlit is installed correctly: `pip show streamlit`
+   Ensure all required data files are in the correct location.
+
+3. **Data visualization errors:**
+   Verify that all data files are in the `data/` directory.
+   Check that the required columns exist in the dataset.
+
+## Contact
+
+For any issues or questions, please contact the repository owner.
 
 ## Running the Dashboard
 
