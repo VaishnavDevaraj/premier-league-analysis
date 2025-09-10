@@ -42,19 +42,48 @@ You can now share the URL with others, or add it to your portfolio by:
 - Adding it to your LinkedIn profile
 - Featuring it in your GitHub profile README
 
-## Updating Your App
+## Handling Deployment Issues
 
-When you make changes to your repository and push them to GitHub, Streamlit Cloud will automatically update your app.
+If you encounter dependency installation errors:
 
-## Troubleshooting
+### Using requirements_cloud.txt
 
-If your app fails to deploy:
+This project includes a `requirements_cloud.txt` file specifically for cloud deployment. If you encounter issues with the standard requirements.txt file, try:
 
-1. **Check the logs** in the Streamlit Cloud dashboard
-2. **Verify dependencies** in your requirements.txt file
-3. **Test locally** before deploying
-4. **Check file paths** in your code (use relative paths)
-5. **Ensure data files** are available and correctly referenced
+1. In Streamlit Cloud, go to your app settings
+2. Under "Advanced settings", change the "Requirements file path" to `requirements_cloud.txt`
+3. Save and redeploy
+
+### Python Version Compatibility
+
+Streamlit Cloud may use a different Python version than your local environment. If you encounter version compatibility issues:
+
+1. In Streamlit Cloud, go to your app settings
+2. Under "Advanced settings", specify a compatible Python version (e.g., "3.9" or "3.10")
+3. Save and redeploy
+
+### Common Issues and Solutions
+
+1. **Missing system dependencies**: 
+   - If you see errors related to missing system packages like `cmake`, contact Streamlit support or consider using a different hosting platform.
+
+2. **Package build failures**:
+   - Use prebuilt wheels where possible
+   - Avoid pinning to specific versions unless necessary
+   - Use version ranges (e.g., `pandas>=1.5.0,<2.0.0`) to allow flexibility
+
+3. **Memory/resource limitations**:
+   - Streamlit Cloud has resource limits. If your app is resource-intensive, consider optimizing your code or upgrading your account.
+
+## Alternative Deployment Options
+
+If Streamlit Cloud isn't working for your needs, consider these alternatives:
+
+1. **Heroku**: Good for small to medium-sized applications
+2. **Render**: Simple deployment with good free tier
+3. **AWS Elastic Beanstalk**: More complex but highly scalable
+4. **Google Cloud Run**: Serverless deployment option
+5. **Azure App Service**: Microsoft's PaaS offering
 
 ## Resources
 

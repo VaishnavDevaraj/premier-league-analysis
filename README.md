@@ -17,6 +17,8 @@ This project provides an interactive dashboard for analyzing English Premier Lea
 - **models/**: Saved machine learning models
 - **visualizations/**: Generated plots and charts
 - **dashboard/**: Interactive dashboard files
+  - `app.py`: Main dashboard application
+  - `app_cloud.py`: Cloud-optimized version for deployment
 
 ## Tools & Technologies
 - Python (Pandas, NumPy)
@@ -41,17 +43,21 @@ This project provides an interactive dashboard for analyzing English Premier Lea
    streamlit run dashboard/app.py
    ```
 
-## Screenshots
-(Screenshots will be added soon)
+## Deployment
+This dashboard can be deployed using:
+- **Streamlit Cloud**: See `DEPLOYMENT.md` for detailed instructions
+- **Alternative Version**: For deployment issues, use `app_cloud.py` (see `CLOUD_VERSION.md`)
+- **Other Platforms**: The dashboard is compatible with Heroku, AWS, Azure, or Google Cloud
+
+## Documentation
+- **HOW_TO_RUN.md**: Detailed instructions for running the project
+- **USER_GUIDE.md**: Guide for using the dashboard features
+- **DEPLOYMENT.md**: Instructions for deploying to Streamlit Cloud
+- **CLOUD_VERSION.md**: Information about the cloud-optimized version
+- **PROJECT_SUMMARY.md**: Technical overview of the project
 
 ## Data Source
 Player statistics data from FBRef for the Premier League 2024-25 season.
-
-## Deployment
-This dashboard can be deployed using:
-- [Streamlit Community Cloud](https://streamlit.io/cloud)
-- Heroku
-- AWS, Azure, or Google Cloud Platform
 
 ## License
 MIT
