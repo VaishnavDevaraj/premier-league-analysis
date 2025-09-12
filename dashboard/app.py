@@ -85,6 +85,14 @@ class MatchPredictionModel:
             'attack': 0, 'defense': 0, 'experience': 0, 'form': 0
         })
         
+        # Home advantage factor (default value)
+        home_advantage = 1.2
+        
+        # Calculate additional features
+        attack_vs_defense_home = home_stats['attack'] / max(0.1, away_stats['defense'])
+        attack_vs_defense_away = away_stats['attack'] / max(0.1, home_stats['defense'])
+        form_difference = home_stats['form'] - away_stats['form']
+        
         # Create feature array
         features = np.array([[
             home_stats['attack'],
@@ -94,7 +102,11 @@ class MatchPredictionModel:
             away_stats['attack'],
             away_stats['defense'],
             away_stats['experience'],
-            away_stats['form']
+            away_stats['form'],
+            attack_vs_defense_home,
+            attack_vs_defense_away,
+            form_difference,
+            home_advantage
         ]])
         
         return features
